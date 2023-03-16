@@ -1,0 +1,13 @@
+version: "2.3"
+services:
+  run:
+    extends:
+        file: java8/java8-runtime.yml
+        service: java8    
+    volumes:
+        - ./workspace_volume:/usr/local/workspace/
+        - ../../volumes/lib:/usr/local/workspace/lib
+    working_dir: /usr/local/workspace/
+    user: ${CURRENT_UID}
+    command: /usr/local/workspace/java_entry.sh
+

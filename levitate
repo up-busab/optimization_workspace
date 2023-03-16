@@ -1,0 +1,19 @@
+#!/bin/bash
+
+target=`cat hax/target`
+version=`cat hax/version`
+level=`cat hax/level`
+
+if [ $# -eq 0 ]
+  then
+    cd ./runtime/volumes/instance$version/$target/$level  
+    exec bash
+fi
+
+if [ $# -eq 1 ]
+  then
+    echo $1 > hax/level    
+    cd ./runtime/volumes/instance$version/$target/$1  
+    exec bash
+fi
+

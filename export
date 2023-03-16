@@ -1,0 +1,11 @@
+#!/bin/bash
+
+version=`cat hax/version`
+
+if [ $# -eq 2 ]
+  then
+    python3 ./hax/export.py $version $1 $2
+fi
+
+
+

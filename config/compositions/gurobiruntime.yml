@@ -1,0 +1,13 @@
+version: "2.3"
+services:
+  
+  run:
+    extends:
+        file: gurobi/gurobi-runtime.yml
+        service: gurobi   
+    volumes:
+        - ./workspace_volume:/usr/local/workspace/
+    working_dir: /usr/local/workspace/
+    user: ${CURRENT_UID}
+    command: /usr/local/workspace/gurobi_entry.sh
+

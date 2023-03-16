@@ -1,0 +1,23 @@
+#!/bin/bash
+
+target=`cat hax/target`
+
+if [ $# -eq 0 ]
+  then
+    python3 ./hax/iterate.py $target  
+fi
+
+if [ $# -eq 1 ]
+  then
+    echo $1 > hax/target    
+    python3 ./hax/iterate.py $1
+fi
+
+
+if [ $# -eq 2 ]
+  then
+    python3 ./hax/iterate.py $target $1 $2
+fi
+
+
+

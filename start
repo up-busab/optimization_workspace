@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f ./nohup.log ];
+then
+    rm ./nohup.log    
+fi
+
+nohup ./go mip
+

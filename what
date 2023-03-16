@@ -1,0 +1,7 @@
+#!/bin/bash
+target=`cat hax/target`
+version=`cat hax/version`
+level=`cat hax/level`
+echo "TARGET ${target}"
+echo "VERSION ${version}"
+echo "LEVEL ${level}"
